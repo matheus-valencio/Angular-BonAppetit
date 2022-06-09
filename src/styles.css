@@ -490,7 +490,8 @@ progress {
 
 .lead {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 500;
+  text-justify: center;
 }
 
 .display-1 {
@@ -600,8 +601,9 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
+  text-align: center;
 }
 
 .img-thumbnail {
@@ -3016,6 +3018,20 @@ textarea.form-control-lg {
   .btn {
     transition: none;
   }
+}
+
+.btn-cardapio{
+  text-align: center;
+}
+
+.btn-menu{
+  width: 350px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #1abc9c;
+    font-size: 18px;
 }
 .btn:hover {
   color: #212529;
