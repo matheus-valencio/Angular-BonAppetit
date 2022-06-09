@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['']">HOME</a>
+          <a class="nav-link" aria-current="page" [routerLink]="['/']">HOME</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" [routerLink]="['lista']"
@@ -40,6 +40,4 @@
     </div>
   </div>
 </nav>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>
