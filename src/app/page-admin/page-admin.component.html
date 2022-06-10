@@ -1,10 +1,14 @@
-<div>
-  <input #input type="text" />
-  <input #input type="text" />
-  <input #input type="text" />
-  <input #input type="text" />
-  <input #input type="text" />
-  <button (click)="tasks.add(input.value); input.value='';">Adicionar</button>
+<h1 class="
+  page-section-heading
+  text-center text-uppercase text-secondary
+  mb-0">Pagina Administrador</h1>
+<div class="inp-adm">
+  <input class="form-control2" #input type="text" />
+  <input class="form-control2"#input type="text" />
+  <input class="form-control2"#input type="text" />
+  <input class="form-control2"#input type="text" />
+  <input class="form-control2"#input type="text" />
+  <button class="btn btn-primary btn-xl disabled" (click)="tasks.add(input.value); input.value='';">Adicionar</button>
   <div class="divider-custom">
     <div class="divider-custom-line"></div>
     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
