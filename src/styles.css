@@ -2236,15 +2236,15 @@ progress {
   color: #6c757d;
 }
 .btn-adm-add{
-  
+
 }
 .form-control2 {
   display: flex;
-  float: left;
-  width: 200px;
-  
-  align-items: center;
-  padding: 10px;
+  margin: 10px;
+  float: initial;
+  width: 100px;
+  align-items: left;
+  padding: 5px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2576,6 +2576,9 @@ textarea.form-control-lg {
 }
 .form-check-input[type='checkbox'] {
   border-radius: 0.25em;
+}
+.inp-adm{
+  margin: 10px;
 }
 .form-check-input[type='radio'] {
   border-radius: 50%;
