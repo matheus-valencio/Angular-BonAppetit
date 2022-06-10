@@ -7,7 +7,7 @@ import { CarrinhoService } from '../carrinho.service';
   styleUrls: ['./page-view-produto.component.css'],
 })
 export class PageViewProdutoComponent implements OnInit {
-  constructor(public carrinho: CarrinhoService) {}
+  constructor() {}
 
   ngOnInit() {}
 }

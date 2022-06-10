@@ -73,12 +73,12 @@
     <p class="lead">Margerita</p>
     </div>
 
-  <div class="btn-cardapio">
-  <button class="btn-menu" id="submitButton" type="submit" 
-  >
-  Send
-  </button>
-  <input input type="text" />
+    <div class="btn-cardapio">
+    <input #input type="text" />
+    <button class="btn-menu" id="submitButton" type="submit" 
+    (click)="carrinho.add(input.value); input.value='';">
+    Adicionar
+    </button>
   
   </div>
     <!-- Portfolio Item 4-->
