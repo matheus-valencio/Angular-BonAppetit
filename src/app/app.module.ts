@@ -7,7 +7,7 @@ import { CardapioComponent } from './cardapio/cardapio.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PedidoComponent } from './pedido/pedido.component';
-import { SobreComponent } from './sobre/sobre.component';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +17,6 @@ import { SobreComponent } from './sobre/sobre.component';
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'cardapio', component: CardapioComponent },
-      { path: 'sobre', component: SobreComponent },
       { path: 'pedidos', component: PedidoComponent },
     ]),
   ],
