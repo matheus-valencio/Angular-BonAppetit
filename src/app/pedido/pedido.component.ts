@@ -8,7 +8,7 @@ import { CarrinhoService } from '../carrinho.service';
 })
 export class PedidoComponent implements OnInit {
  
-  constructor(public carrinho: CarrinhoService) {}
+  constructor() {}
   
   ngOnInit() {
   }
