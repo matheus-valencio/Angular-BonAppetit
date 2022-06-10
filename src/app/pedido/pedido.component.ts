@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CarrinhoService } from '../carrinho.service';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-pedido',
@@ -8,7 +8,7 @@ import { CarrinhoService } from '../carrinho.service';
 })
 export class PedidoComponent implements OnInit {
  
-  constructor(public carrinho: CarrinhoService) {}
+  constructor(public tasks: TasksService) {}
   
   ngOnInit() {
   }

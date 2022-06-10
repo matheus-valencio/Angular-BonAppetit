@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CarrinhoService } from '../carrinho.service';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-page-view-produto',
@@ -7,7 +7,7 @@ import { CarrinhoService } from '../carrinho.service';
   styleUrls: ['./page-view-produto.component.css'],
 })
 export class PageViewProdutoComponent implements OnInit {
-  constructor() {}
+  constructor(public tasks: TasksService) {}
 
   ngOnInit() {}
 }
