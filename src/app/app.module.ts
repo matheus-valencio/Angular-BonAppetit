@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 
@@ -15,10 +16,19 @@ import { TasksService } from './tasks.service';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,
+    HomeComponent,
+    LoginComponent,
+    CardapioComponent,
+    PedidoComponent,
+    PageViewProdutoComponent,
+    PageAdminComponent
+
+  ],
   imports: [
     
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
