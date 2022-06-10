@@ -1,0 +1,18 @@
+<div>
+  <input #id id="hora" type="text"/>
+  <button click="Admin.getLista(id.value)">Adicionar</button>
+  <h1>Produtos adicionados</h1>
+  <table style="border: 1">
+    <tr *ngFor="let produto of Admin.getLista(); index as i">
+      <th>Identificação produto</th>
+      <th>Nome produto</th>
+      <th>Descrição produto</th>
+      <th>Nome Imagem</th>
+      <th>Valor produto</th>
+      <th>Categoria id</th>
+    </tr>
+    <tr>
+      <th> </th>
+    </tr>
+  </table>
+</div>
