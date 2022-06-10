@@ -1,6 +1,11 @@
 <div>
- 
-  <button >Adicionar</button>
+  <input #input type="text" />
+  <button (click)="tasks.add(input.value); input.value='';">Adicionar</button>
+  <div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+    <div class="divider-custom-line"></div>
+  </div>
   <h1 class="
   page-section-heading
   text-center text-uppercase text-secondary
@@ -19,8 +24,10 @@
       <th>Valor produto</th>
       <th>Categoria id</th>
     </tr>
-    <tr>
-      <th> </th>
+    <tr *ngFor="let task of tasks.getList(), index as i">
+      <td> {{task.title}}
+        
+      </td>
     </tr>
   </table>
 </div>
