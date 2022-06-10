@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { CardapioComponent } from './cardapio/cardapio.component';
+
 import { CarrinhoService } from './carrinho.service';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -19,7 +19,7 @@ import { TasksService } from './tasks.service';
   declarations: [AppComponent,
     HomeComponent,
     LoginComponent,
-    CardapioComponent,
+   
     PedidoComponent,
     PageViewProdutoComponent,
     PageAdminComponent
@@ -32,7 +32,7 @@ import { TasksService } from './tasks.service';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'cardapio', component: CardapioComponent },
+      
       { path: 'pedidos', component: PedidoComponent },
       {path: 'pageviewproduto', component: PageViewProdutoComponent},
       {path: 'pageadmin', component: PageAdminComponent}
