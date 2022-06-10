@@ -1,15 +1,10 @@
 <div>
-  <input #id id="hora" type="text"/>
-  <button click="admin.adicionarLista(
+  <input #pk_produto type="number"/>
+  <button click="Admin.adicionarLista(
     pk_produto.value
-    nm_produto.value
-    ds_produto.value
-    nm_imagem.value
-    vl_produto.value
-    categoria_pk_produto.value  
-    )">Adicionar</button>
+    ); pk_produto.value=´´">Adicionar</button>
   <h1>Produtos adicionados</h1>
-  <table *ngFor="let produto of Admin.getLista(); index as i">
+  <table >
     <tr >
       <th>Identificação produto</th>
       <th>Nome produto</th>
@@ -19,7 +14,7 @@
       <th>Categoria id</th>
     </tr>
     <tr>
-      <th> {{produto.pk_produto}}</th>
+      <th> </th>
     </tr>
   </table>
 </div>

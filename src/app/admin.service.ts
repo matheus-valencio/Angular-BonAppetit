@@ -16,7 +16,7 @@ lista: Array<Admin> = [];
 
   getLista(){
     return this.lista; 
-  }
+  };
 
   adicionarLista(
     pk_produto: number,
@@ -24,7 +24,7 @@ lista: Array<Admin> = [];
     ds_produto: string,
     nm_imagem: string,
     vl_produto: number,
-    categoria_pk_produto: string,
+    categoria_pk_produto: string
   )
   {
     this.lista.push({pk_produto,
@@ -32,10 +32,10 @@ lista: Array<Admin> = [];
       ds_produto,
       nm_imagem,
       vl_produto,
-      categoria_pk_produto})
+      categoria_pk_produto});
   }
 
-  deleteItem(index) {
+  deleteItem(index: number) {
     this.lista.splice(index, 1);
   }
 }
