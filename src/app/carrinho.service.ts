@@ -15,7 +15,7 @@ export class CarrinhoService {
     return this.list;
   }
 
-  add(title: string){
+  add(tnome_produto: string){
     this.list.push()
   }
 
