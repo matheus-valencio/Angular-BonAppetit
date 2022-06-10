@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarrinhoService } from '../carrinho.service';
 
 @Component({
   selector: 'app-pedido',
@@ -10,11 +11,7 @@ export class PedidoComponent implements OnInit {
   nome_sabor: string;
   descricao: string
 
-  constructor() {
-    this.id = 1;
-    this.nome_sabor = 'mussarela';
-    this.descricao = 'Pizza com queijo mussarela'
-   }
+  constructor(public carrinho: CarrinhoService) {}
   
   ngOnInit() {
   }
