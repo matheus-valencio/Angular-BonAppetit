@@ -10,15 +10,5 @@ export class CarrinhoService {
 
   constructor() {}
 
-  getList() {
-    return this.list;
-  }
 
-  add(nome_produto: string) {
-    this.list.push();
-  }
-
-  remove(index: number) {
-    this.list.slice(index, 1);
-  }
 }
