@@ -2241,7 +2241,7 @@ progress {
 .form-control2 {
   display: flex;
   margin: 10px;
-  float: initial;
+  
   width: 100px;
   align-items: left;
   padding: 5px;
