@@ -3,12 +3,20 @@
   text-center text-uppercase text-secondary
   mb-0">Pagina Administrador</h1>
 <div class="inp-adm">
-  <input class="form-control2" #input type="text" />
-  <input class="form-control2"#input type="text" />
-  <input class="form-control2"#input type="text" />
-  <input class="form-control2"#input type="text" />
-  <input class="form-control2"#input type="text" />
-  <button class="btn-adm-add" (click)="tasks.add(input.value); input.value='';">Adicionar</button>
+ 
+  <input class="form-control2"#pk_id type="text" />
+  <input class="form-control2"#ds_produto type="text" />
+  <input class="form-control2"#nm_produto type="text" />
+  <input class="form-control2"#nm_imagem type="text" />
+  <input class="form-control2"#vl_produto type="text" />
+  <input class="form-control2"#categoria_pk_id type="text" />
+  <button class="btn-adm-add" (click)="tasks.add(
+    pk_id.value, 
+    ds_produto.value, 
+    nm_produto.value, 
+    nm_imagem.value, 
+    categoria_pk_id.value ,
+    vl_produto.value); pk_id.value='';">Adicionar</button>
   <div class="divider-custom">
     <div class="divider-custom-line"></div>
     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -29,15 +37,19 @@
      <th>Id</th>
      <th>Nome</th>
      <th>Descrição</th>
+     <th>Nome Imagem</th>
      <th>Valor</th>
      <th>Id Categoria</th>
+     <th>Excluir </th>
    </tr>
  </thead>
  <tr *ngFor="let task of tasks.getList(); index as i">
-   <a >{{task.title}}</a>
-   <td></td>
-   <td></td>
-   <td></td>
+   <a >{{task.pk_id}}</a>
+   <td>{{task.nm_produto}}</td>
+   <td>{{task.ds_produto}}</td>
+   <td>{{task.nm_imagem}}</td>
+   <td>{{task.vl_produto}}</td>
+   <td>{{task.categoria_pk_id}}</td>
    <td>
      <button
    
