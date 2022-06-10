@@ -15,7 +15,58 @@ interface Task{
 
 @Injectable()
 export class TasksService {
-  list: Array<Task> = [];
+  list: Array<Task> = [
+    {
+    pk_id: '1',
+    nm_produto: 'Mussarela',
+    ds_produto: 'Pizza Mussarela',
+    nm_imagem: 'Pizza Mussarela',
+    vl_produto: '40',
+    categoria_pk_id: '2',
+    },
+    {
+      pk_id: '2',
+      nm_produto: 'Mussarela',
+      ds_produto: 'Pizza Mussarela',
+      nm_imagem: 'Pizza Mussarela',
+      vl_produto: '40',
+      categoria_pk_id: '2',
+      },
+      {
+        pk_id: '3',
+        nm_produto: 'Mussarela',
+        ds_produto: 'Pizza Mussarela',
+        nm_imagem: 'Pizza Mussarela',
+        vl_produto: '40',
+        categoria_pk_id: '2',
+        },
+        {
+          pk_id: '4',
+          nm_produto: 'Mussarela',
+          ds_produto: 'Pizza Mussarela',
+          nm_imagem: 'Pizza Mussarela',
+          vl_produto: '40',
+          categoria_pk_id: '2',
+          },
+          {
+            pk_id: '5',
+            nm_produto: 'Mussarela',
+            ds_produto: 'Pizza Mussarela',
+            nm_imagem: 'Pizza Mussarela',
+            vl_produto: '40',
+            categoria_pk_id: '2',
+            },
+            {
+              pk_id: '6',
+              nm_produto: 'Mussarela',
+              ds_produto: 'Pizza Mussarela',
+              nm_imagem: 'Pizza Mussarela',
+              vl_produto: '40',
+              categoria_pk_id: '2',
+              },
+             
+
+  ];
 
   constructor() { }
   

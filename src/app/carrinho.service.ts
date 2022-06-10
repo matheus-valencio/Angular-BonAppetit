@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 interface Carrinho {
-  nome_produto: string;
+  
 }
 
 @Injectable()
