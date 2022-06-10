@@ -6,22 +6,19 @@ interface Carrinho {
 
 @Injectable()
 export class CarrinhoService {
-
   list: Array<Carrinho> = [];
 
-  constructor() { }
+  constructor() {}
 
-  getList(){
+  getList() {
     return this.list;
   }
 
-  add(nome_produto: string){
-    this.list.push()
+  add(nome_produto: string) {
+    this.list.push();
   }
 
-  remove(index: number){
+  remove(index: number) {
     this.list.slice(index, 1);
   }
-
-
 }
