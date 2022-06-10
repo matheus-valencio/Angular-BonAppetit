@@ -2235,12 +2235,15 @@ progress {
   font-size: 0.875em;
   color: #6c757d;
 }
-
+.btn-adm-add{
+  
+}
 .form-control2 {
   display: flex;
   float: left;
   width: 200px;
   
+  align-items: center;
   padding: 10px;
   font-size: 1rem;
   font-weight: 400;
