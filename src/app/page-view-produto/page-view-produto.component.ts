@@ -16,6 +16,6 @@ export class PageViewProdutoComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
       this.item = this.tasks.getList()[params.get('index')];
-    })
+    });
   }
 }
