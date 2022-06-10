@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { AdminService } from './admin.service';
+
 
 import { AppComponent } from './app.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
@@ -29,7 +29,7 @@ import { PedidoComponent } from './pedido/pedido.component';
 
   providers: [
     CarrinhoService,
-    AdminService
+   
   ],
   bootstrap: [AppComponent],
 })

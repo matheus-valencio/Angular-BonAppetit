@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from '../admin.service';
+
 
 @Component({
   selector: 'app-page-admin',
@@ -8,7 +8,7 @@ import { AdminService } from '../admin.service';
 })
 export class PageAdminComponent implements OnInit {
 
-  constructor(public Admin: AdminService) { }
+  constructor() { }
 
   ngOnInit() {
   }
