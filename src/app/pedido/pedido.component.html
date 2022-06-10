@@ -18,9 +18,9 @@
     <div class="divider-custom-line"></div>
   </div>
   <!-- Portfolio Grid Items-->
-  <div class="row justify-content-center">
-    <!-- Portfolio Item 1-->
-    <div style="text-align: center">
+  <div class="row justify-content-center" *ngFor="let task of tasks.getList(); index as i">
+    <!--Cardapio item-->
+    <div style="text-align: center" >
     <img
     
       class="img-fluid"
@@ -30,116 +30,18 @@
     />
     </div>
     <div style="text-align: center"  >
-    <p class="lead" >{{item.nm_produto}}</p>
+    <p class="lead" >{{task.nm_produto}}</p>
     </div>
 
   <div>
-  <a [routerLink]="['/pageviewproduto']"> <button class="btn-menu" id="submitButton" type="submit">Send
+  <a [routerLink]="['/pageviewproduto',i]"> <button class="btn-menu" id="submitButton" type="submit">Send
   </button> </a>
   
   </div>
-    <!-- Portfolio Item 2-->
+    
+
+  
    
-        <div style="text-align: center">
-        <img
-        
-          class="img-fluid"
-          src="https://biancapizzaria.com.br/wp-content/uploads/2015/07/03-calabresa3-233x200@2x.png"
-          alt="..."
-          
-        />
-        </div>
-        <div style="text-align: center" >
-        <p class="lead">Calabresa</p>
-        </div>
-  
-      <div class="btn-cardapio">
-      <button class="btn-menu" id="submitButton" type="submit">Send
-      </button>
-      
-      </div>
-   
-    <!-- Portfolio Item 3-->
-    <div style="text-align: center">
-    <img
-    
-      class="img-fluid"
-      src="https://biancapizzaria.com.br/wp-content/uploads/2015/07/24-margherita3-233x200@2x.png"
-      alt="..."
-      
-    />
-    </div>
-    <div style="text-align: center" >
-    <p class="lead">Margerita</p>
-    </div>
-
-    <div class="btn-cardapio">
-    
-    <button class="btn-menu" id="submitButton" type="submit" 
-    >
-    Adicionar
-    </button>
-  
-  </div>
-    <!-- Portfolio Item 4-->
-    <div style="text-align: center">
-    <img
-    
-      class="img-fluid"
-      src="https://biancapizzaria.com.br/wp-content/uploads/2015/07/08-basca3-233x200@2x.png"
-      alt="..."
-      
-    />
-    </div>
-    <div style="text-align: center" >
-    <p class="lead">Basca</p>
-    </div>
-
-  <div class="btn-cardapio">
-  <button class="btn-menu" id="submitButton" type="submit">Send
-  </button>
-  
-  </div>
-    <!-- Portfolio Item 5-->
-    <div style="text-align: center">
-    <img
-    
-      class="img-fluid"
-      src="https://biancapizzaria.com.br/wp-content/uploads/2015/07/10-mafiosa2-233x200@2x.png"
-      alt="..."
-      
-    />
-    </div>
-    <div style="text-align: center" >
-    <p class="lead">Mafiosa</p>
-    </div>
-
-  <div class="btn-cardapio">
-  <button class="btn-menu" id="submitButton" type="submit">Send
-  </button>
-  
-  </div>
-    <!-- Portfolio Item 6-->
-    <div style="text-align: center">
-    <img
-    
-      class="img-fluid"
-      src="https://biancapizzaria.com.br/wp-content/uploads/2015/07/23-bro%C2%A6%C3%BCcolis-com-catupiry2-233x200@2x.png"
-      alt="..."
-      
-    />
-    </div>
-    <div style="text-align: center" >
-    <p class="lead">Brocolis</p>
-    </div>
-
-  <div class="btn-cardapio">
-  <button class="btn-menu" id="submitButton" type="submit">Send
-  </button>
-
-  
-    
-    </div>
   </div>
 </div>
 </section>
