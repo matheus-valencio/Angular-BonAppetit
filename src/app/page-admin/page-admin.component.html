@@ -5,8 +5,16 @@
   <input #nm_imagem type="text"/>
   <input #vl_produto type="text"/>
   <input #categoria_pk_produto type="text"/>
-  <button (click)="Admin.adicionarLista(pk_produto.value, nm_produto.value, ds_produto.value, nm_imagem.value, vl_produto.value, categoria_pk_produto.value); 
-  ">Adicionar</button>
+  <button (click)="
+  Admin.addLista(
+    pk_produto.value, 
+    nm_produto.value, 
+    ds_produto.value, 
+    nm_imagem.value, 
+    vl_produto.value, 
+    categoria_pk_produto.value
+  )
+">Adicionar</button>
   <h1>Produtos adicionados</h1>
   <table >
     <tr >
