@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { PageAdminComponent } from './page-admin/page-admin.component';
 import { PageViewProdutoComponent } from './page-view-produto/page-view-produto.component';
 import { PedidoComponent } from './pedido/pedido.component';
+import { TasksService } from './tasks.service';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { PedidoComponent } from './pedido/pedido.component';
 
   providers: [
     CarrinhoService,
+    TasksService
    
   ],
   bootstrap: [AppComponent],
