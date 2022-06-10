@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
+import { CarrinhoService } from './carrinho.service';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PageViewProdutoComponent } from './page-view-produto/page-view-produto.component';
@@ -23,7 +24,9 @@ import { PedidoComponent } from './pedido/pedido.component';
     ]),
   ],
 
-  providers: [],
+  providers: [
+    CarrinhoService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

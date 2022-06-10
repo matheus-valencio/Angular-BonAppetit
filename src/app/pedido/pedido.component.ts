@@ -7,10 +7,7 @@ import { CarrinhoService } from '../carrinho.service';
   styleUrls: ['./pedido.component.css']
 })
 export class PedidoComponent implements OnInit {
-  id: number;
-  nome_sabor: string;
-  descricao: string
-
+ 
   constructor(public carrinho: CarrinhoService) {}
   
   ngOnInit() {
