@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { TasksService } from '../tasks.service';
 
 @Component({
@@ -7,7 +8,14 @@ import { TasksService } from '../tasks.service';
   styleUrls: ['./page-view-produto.component.css'],
 })
 export class PageViewProdutoComponent implements OnInit {
-  constructor(public tasks: TasksService) {}
+  item;
+  constructor(public tasks: TasksService,
+    private route: ActivatedRoute
+    ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.paramMap.subscribe((params) => {
+      this.item = this.tasks.getList()[params.get('index')];
+    })
+  }
 }
