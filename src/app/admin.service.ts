@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
 interface Admin{
-pk_produto: number;
+pk_produto: string;
 nm_produto: string;
 ds_produto: string;
 nm_imagem: string;
-vl_produto: number;
+vl_produto: string
 categoria_pk_produto: string;
 
 }
@@ -19,11 +19,11 @@ lista: Array<Admin> = [];
   };
 
   adicionarLista(
-    pk_produto: number,
+    pk_produto: string,
     nm_produto: string,
     ds_produto: string,
     nm_imagem: string,
-    vl_produto: number,
+    vl_produto: string,
     categoria_pk_produto: string
   )
   {
