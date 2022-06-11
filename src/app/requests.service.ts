@@ -11,7 +11,7 @@ interface Auth {
 @Injectable()
 export class RequestsService {
   name = 'My spring boot app';
-  site = 'http://localhost:8080';
+  site = 'https://api-bonappetit.herokuapp.com';
   login = 'admin'; //admin
   password = 'admin'; //admin
 
@@ -44,6 +44,9 @@ export class RequestsService {
   }
   postLogout() {
     this.auth = null;
+    if (this.auth == null) {
+      this.route.navigate(['/login']);
+    }
   }
 
   getList() {

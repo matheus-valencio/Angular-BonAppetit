@@ -110,17 +110,16 @@
         <th>Descrição</th>
         <th>Nome Imagem</th>
         <th>Valor</th>
-        <th>Categoria</th>
         <th>Excluir</th>
       </tr>
     </thead>
     <button (click)="requests.getList()">Atualizar</button>
     <tr *ngFor="let item of requests.list">
       <a>{{ item['id'] }}</a>
-      <td>{{ item['produtos'] }}</td>
-      <td>R$ {{ item['valor'] }}</td>
+      <td>{{ item['nome'] }}</td>
       <td>{{ item['descricao'] }}</td>
-      <td>{{ item['categoria'] }}</td>
+      <td>{{ item['produtoImagem'] }}</td>
+      <td>R$ {{ item['valor'] }}</td>
       <td>
         <button (click)="requests.deletarProduto(item['id'])">Excluir</button>
       </td>
