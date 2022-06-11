@@ -42,6 +42,9 @@ export class RequestsService {
         }
       });
   }
+  postLogout() {
+    this.auth = null;
+  }
 
   getList() {
     this.http.get<any>(this.site + '/produtos', {}).subscribe((data) => {
@@ -81,11 +84,7 @@ export class RequestsService {
   }
   putCategoria(idc, nomec) {
     this.http
-      .put(
-        this.site + '/categoria/' + idc,
-        { id: idc, nome: nomec },
-        this.header
-      )
+      .put(this.site + '/categoria', { id: idc, nome: nomec }, this.header)
       .subscribe((data) => {
         console.log(data);
       });
