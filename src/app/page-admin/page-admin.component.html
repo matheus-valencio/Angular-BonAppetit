@@ -2,12 +2,23 @@
   Pagina Administrador
 </h1>
 <div class="inp-adm">
-  <input class="form-control2" #pk_id type="text" />
-  <input class="form-control2" #ds_produto type="text" />
-  <input class="form-control2" #nm_produto type="text" />
-  <input class="form-control2" #nm_imagem type="text" />
-  <input class="form-control2" #vl_produto type="text" />
-  <input class="form-control2" #categoria_pk_id type="text" />
+  <h2>Adicionar Produto</h2>
+  <input class="form-control2" #pk_id type="text" placeholder="id" />
+  <input
+    class="form-control2"
+    #ds_produto
+    type="text"
+    placeholder="Descrição"
+  />
+  <input class="form-control2" #nm_produto type="text" placeholder="Produto" />
+  <input class="form-control2" #nm_imagem type="text" placeholder="Imagem" />
+  <input class="form-control2" #vl_produto type="text" placeholder="valor" />
+  <input
+    class="form-control2"
+    #categoria_pk_id
+    type="text"
+    placeholder="categoria"
+  />
   <button
     class="btn-adm-add"
     (click)="
@@ -29,6 +40,56 @@
     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
     <div class="divider-custom-line"></div>
   </div>
+  <div class="inp-adm">
+    <h2>Adicionar Categoria</h2>
+    <input
+      class="form-control2"
+      #categoria
+      type="text"
+      placeholder="Categoria"
+    />
+    <button (click)="requests.postCategoria(categoria.value)">Adicionar</button>
+  </div>
+  <br /><br />
+  <h1
+    class="page-section-heading text-center text-uppercase text-secondary mb-0"
+  >
+    Categorias Adicionadas
+  </h1>
+  <div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+    <div class="divider-custom-line"></div>
+  </div>
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Excluir</th>
+        <th>Atualizar</th>
+      </tr>
+    </thead>
+    <button (click)="requests.getCategoria()">Atualizar Lista</button>
+    <tr *ngFor="let item of requests.listCat">
+      <a>{{ item['id'] }}</a>
+      <td>
+        <h2>Adicionar Categoria</h2>
+        <input
+          class="form-control2"
+          #categoria
+          type="text"
+          value="{{ item['nome'] }}"
+        />
+      </td>
+      <td>
+        <button (click)="requests.deletarCategoria(item['id'])">Excluir</button>
+      </td>
+      <td>
+        <button (click)="requests.putCategoria(item['id'])">Atualizar</button>
+      </td>
+    </tr>
+  </table>
   <h1
     class="page-section-heading text-center text-uppercase text-secondary mb-0"
   >
@@ -47,7 +108,7 @@
         <th>Descrição</th>
         <th>Nome Imagem</th>
         <th>Valor</th>
-        <th>Id Categoria</th>
+        <th>Categoria</th>
         <th>Excluir</th>
       </tr>
     </thead>

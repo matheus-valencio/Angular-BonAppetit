@@ -19,6 +19,7 @@ export class RequestsService {
   header = null;
 
   list = null;
+  listCat = null;
   constructor(private http: HttpClient, private route: Router) {}
 
   postLogin(psw, login) {
@@ -54,6 +55,35 @@ export class RequestsService {
       .delete<any>(this.site + '/produtos/' + id, this.header)
       .subscribe(() => {
         this.getList();
+      });
+  }
+
+  postCategoria(categoria) {
+    this.http
+      .post<any>(this.site + '/categoria', { nome: categoria }, this.header)
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
+
+  getCategoria() {
+    this.http.get<any>(this.site + '/categoria', {}).subscribe((data) => {
+      this.listCat = data;
+      console.log(data);
+    });
+  }
+  deletarCategoria(id) {
+    this.http
+      .delete<any>(this.site + '/categoria/' + id, this.header)
+      .subscribe(() => {
+        this.getCategoria();
+      });
+  }
+  putCategoria() {
+    this.http
+      .post<any>(this.site + '/categoria', { nome: this.nome }, this.header)
+      .subscribe((data) => {
+        console.log(data);
       });
   }
 
