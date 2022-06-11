@@ -13,6 +13,7 @@ import { PageAdminComponent } from './page-admin/page-admin.component';
 import { PageViewProdutoComponent } from './page-view-produto/page-view-produto.component';
 import { PedidoComponent } from './pedido/pedido.component';
 import { TasksService } from './tasks.service';
+import { RequestsService } from './requests.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { TasksService } from './tasks.service';
     ]),
   ],
 
-  providers: [CarrinhoService, TasksService],
+  providers: [CarrinhoService, TasksService, RequestsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

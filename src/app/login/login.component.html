@@ -36,7 +36,7 @@
               type="text"
               placeholder="usuário"
               data-sb-validations="required,email"
-              [(ngModel)]="login"
+              #login
             />
             <label for="user">Usuário</label>
             <div class="invalid-feedback" data-sb-feedback="email:required">
@@ -55,7 +55,7 @@
                 type="password"
                 placeholder="1234567"
                 data-sb-validations="required,password"
-                [(ngModel)]="password"
+                #password
               />
               <label for="password">Senha</label>
               <div class="invalid-feedback" data-sb-feedback="email:required">
@@ -68,8 +68,7 @@
 
             <button
               class="btn btn-primary btn-xl"
-              id="submitButton"
-              (click)="postLogin()"
+              (click)="requests.postLogin(password.value, login.value)"
             >
               Enviar
             </button>
