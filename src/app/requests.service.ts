@@ -79,9 +79,13 @@ export class RequestsService {
         this.getCategoria();
       });
   }
-  putCategoria() {
+  putCategoria(idc, nomec) {
     this.http
-      .post<any>(this.site + '/categoria', { nome: this.nome }, this.header)
+      .put(
+        this.site + '/categoria/' + idc,
+        { id: idc, nome: nomec },
+        this.header
+      )
       .subscribe((data) => {
         console.log(data);
       });

@@ -86,7 +86,9 @@
         <button (click)="requests.deletarCategoria(item['id'])">Excluir</button>
       </td>
       <td>
-        <button (click)="requests.putCategoria(item['id'])">Atualizar</button>
+        <button (click)="requests.putCategoria(item['id'], categoria.value)">
+          Atualizar
+        </button>
       </td>
     </tr>
   </table>
