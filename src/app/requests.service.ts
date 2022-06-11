@@ -18,6 +18,7 @@ export class RequestsService {
   auth = null;
   header = null;
 
+  list = null;
   constructor(private http: HttpClient, private route: Router) {}
 
   postLogin(psw, login) {
@@ -38,6 +39,21 @@ export class RequestsService {
         if (this.auth.profile[0] == ['ADMIN']) {
           this.route.navigate(['/pageadmin']);
         }
+      });
+  }
+
+  getList() {
+    this.http.get<any>(this.site + '/produtos', {}).subscribe((data) => {
+      this.list = data;
+    });
+    return this.list;
+  }
+
+  deletarProduto(id) {
+    this.http
+      .delete<any>(this.site + '/produtos/' + id, this.header)
+      .subscribe(() => {
+        this.getList();
       });
   }
 
