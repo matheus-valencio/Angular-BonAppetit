@@ -634,7 +634,7 @@ progress {
 }
 
 .img-fluid {
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
   text-align: center;
 }
@@ -3151,9 +3151,10 @@ textarea.form-control.is-invalid {
 }
 
 .btn-menu {
-  width: 350px;
+  width: 250px;
   text-align: center;
   padding: 15px 20px;
+  margin: 10px 50px 10px 100px;
   border: 1px solid #eee;
   border-radius: 6px;
   background-color: #1abc9c;
